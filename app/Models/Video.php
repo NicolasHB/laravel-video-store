@@ -11,4 +11,14 @@ class Video extends Model
 
     protected $guarded = [];
 
+    public function images()
+    {
+        return $this->hasMany(Images::class);
+    }
+
+    public function category()
+    {
+        return $this->hasOne(Category::class);
+    }
+
 }

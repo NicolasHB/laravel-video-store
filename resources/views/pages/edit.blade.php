@@ -1,10 +1,11 @@
 <x-layouts.main-layout
-title="Add Articles"
+title="update"
 > 
 <div class="container">
-    <h1 class="font-bold text-4xl pb-10 py-10 text-center">New post</h1>
-    <form class="" action="{{ route('videos.store') }}" method="POST" enctype="multipart/form-data">
+    <h1 class="font-bold text-4xl pb-10 py-10 text-center">update movie</h1>
+    <form class="" action="{{ route('videos.update', $video->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
         <div class="">
             {{-- Title --}}
             <input class="block w-full rounded-lg border border-gray-400" type="text" name="title" id="" placeholder="Titre du film" value="{{ old('title') }}">
