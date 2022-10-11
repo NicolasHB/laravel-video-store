@@ -49,7 +49,7 @@ class VideoController extends Controller
      */
     public function show(Video $video)
     {
-        return view('pages.show', compact('videos'));
+        return view('pages.show', compact('video'));
     }
 
     /**
